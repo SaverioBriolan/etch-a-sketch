@@ -1,17 +1,18 @@
 
 const container = document.querySelector('.container');
-function createDiv (nb) {
+function createCell (nb) {
    for (i=0; i < nb; i++){
-        const newDiv = document.createElement('div');
-        container.appendChild(newDiv);
-        newDiv.setAttribute('style', 'width: 50px;height: 50px; background-color: gray; margin: 0px');
-        newDiv.className = 'square';
+        const cell = document.createElement('div');
+        container.appendChild(cell);
+        cell.className = 'cell';
     }
 }
-createDiv(256);
-container.setAttribute('style', 'width: 800px; height: 800px; display: flex; flex-wrap: wrap;')
-const squares = document.querySelectorAll('.square');
-squares.forEach((square) => {
+createCell(256);
+const cells = document.querySelectorAll('.cell');
+cells.forEach((cell) => {
+    cell.addEventListener("mouseenter", (event) => {
+        event.target.style.backgroundColor = "#403d39";
+    })
 });
 
 

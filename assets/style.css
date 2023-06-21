@@ -1,6 +1,24 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+}
+h1{
+    color: #adb5bd;
+}
+.container{
+    width: 640px; 
+    height: 640px; 
+    display: flex; 
+    flex-wrap: wrap;
+    border: solid #adb5bd 32px;
+    border-radius: 5%;
+}
+.cell{
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #e9ecef; 
 }
