@@ -32,6 +32,34 @@ function askNumber(){
     createCell(nbCell);
 }
 
+function changeColor(){
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseenter", (event) => {
+            const randomBetween = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
+            const r = randomBetween(0, 255);
+            const g = randomBetween(0, 255);
+            const b = randomBetween(0, 255);
+            const rgb = `rgb(${r},${g},${b})`; // Collect all to a css color string
+            event.target.style.backgroundColor = rgb;
+        })
+    });
+    //Switch text button
+    const color = document.querySelector('.color');
+    text = color.textContent;
+    if (text == "Switch to color"){
+    color.textContent = "Switch to black";
+    } else {
+        color.textContent = "Switch to color";
+        const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseenter", (event) => {
+            event.target.style.backgroundColor = "#403d39";
+        })
+    });
+    }
+}
+
 
 
 

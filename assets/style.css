@@ -20,8 +20,8 @@ p{
     display: flex; 
     flex-wrap: wrap;
     border: solid #adb5bd 30px;
-    border-right-color: #ced4da;
-    border-left-color: #ced4da;
+    border-right-width: 20px;
+    border-left-width: 20px; 
     border-radius: 5%;
 }
 .cell{
@@ -60,7 +60,18 @@ button:active{
     width: 320px;
     background-color: #ced4da;
     border-radius: 0% 60% 60% 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
 }
 .presentation, .right-side{
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.color{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-bottom: 25%;
 }
